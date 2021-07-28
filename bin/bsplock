@@ -21,47 +21,47 @@ TOTD=`fortune -n 90 -s | head -n 1`
 i3lock \
 --color="${BG}D9"			\
 \
---insidever-color=${GREEN}	\
---insidewrong-color=${RED}	\
---inside-color="${BG}00"	\
+--insidevercolor=${GREEN}	\
+--insidewrongcolor=${RED}	\
+--insidecolor="${BG}00"		\
 \
---ringver-color=${GREEN}	\
---ringwrong-color=${RED}	\
---ring-color=${BLUE}		\
+--ringvercolor=${GREEN}		\
+--ringwrongcolor=${RED}		\
+--ringcolor=${BLUE}			\
 \
---line-color=${BG}			\
---separator-color=${BG}		\
+--linecolor=${BG}			\
+--separatorcolor=${BG}		\
 \
---keyhl-color=${YELLOW}		\
---bshl-color=${RED}			\
+--keyhlcolor=${YELLOW}		\
+--bshlcolor=${RED}			\
 \
---verif-color=${BG}			\
---wrong-color=${FG}			\
---layout-color=${FG}		\
+--verifcolor=${BG}			\
+--wrongcolor=${FG}			\
+--layoutcolor=${FG}			\
 \
---time-color=${FG}			\
---date-color=${FG}			\
+--timecolor=${FG}			\
+--datecolor=${FG}			\
 \
 --pass-media-keys			\
 --pass-screen-keys			\
 --pass-power-keys			\
 --pass-volume-keys			\
 --{time,date,layout,verif,wrong,greeter}-font="Iosevka"			\
---{layout,verif,wrong,greeter}-size=18							\
---time-size=34													\
---date-size=18													\
---greeter-text="${TOTD}"			\
---greeter-color=${CYAN}				\
---verif-text="verifying..."			\
---wrong-text="wrong!"				\
---noinput-text="Empty"				\
---lock-text="Locking..."			\
---lockfailed-text="Failed to lock"	\
+--{layout,verif,wrong,greeter}size=18							\
+--timesize=34													\
+--datesize=18													\
+--greetertext="${TOTD}"				\
+--greetercolor=${CYAN}				\
+--veriftext="verifying..."			\
+--wrongtext="wrong!"				\
+--noinputtext="Empty"				\
+--locktext="Locking..."				\
+--lockfailedtext="Failed to lock"	\
 --radius 120				\
 --ring-width 8.0			\
 --screen 1					\
 --clock						\
 --indicator					\
---time-str="%I:%M %p"		\
---date-str="%b %d, %G"		\
+--timestr="%I:%M %p"		\
+--datestr="%b %d, %G"		\
 #--blur 5					\

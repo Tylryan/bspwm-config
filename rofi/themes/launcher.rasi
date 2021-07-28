@@ -1,6 +1,7 @@
 configuration {
     font:                           "Iosevka 10";
     show-icons:                     true;
+	icon-theme: 					"Hybrid";
     display-drun: 					":";
     drun-display-format:            "{icon} {name}";
     threads:                        0;

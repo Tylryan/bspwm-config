@@ -1,6 +1,7 @@
 configuration {
     font:                           "Iosevka 10";
     show-icons:                     false;
+	icon-theme: 					"Papirus";
     display-drun: 					":";
     drun-display-format:            "{name}";
     threads:                        0;
@@ -112,6 +113,14 @@ element-text {
     horizontal-align:               0;
     vertical-align:                 0;
     margin:                         2px 0px 2px 2px;
+}
+
+element selected {
+    background-color:               @selected;
+    text-color:                     @background;
+    border:                  		0px;
+    border-radius:                  0px;
+    border-color:                  	@selected;
 }
 
 element normal.urgent,

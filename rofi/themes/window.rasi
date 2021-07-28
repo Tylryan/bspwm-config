@@ -1,6 +1,7 @@
 configuration {
     font:                           "Iosevka 10";
     show-icons:                     true;
+	icon-theme: 					"Hybrid";
     display-window: 				"Windows :";
     window-format:            		" {w}  {n}   {t:33}";
     threads:                        0;

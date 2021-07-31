@@ -43,15 +43,6 @@ bspc config focus_follows_pointer true
 # remove all rules first
 bspc rule -r *:*
 
-# 1 > terminal
-bspc rule -a Alacritty desktop='^1' follow=on focus=on
-
-# 2 > web
-bspc rule -a firefox desktop='^2' follow=on focus=on
-
-# 3 > file
-bspc rule -a Pcmanfm desktop='^3' follow=on focus=on
-
 # 4 > office
 declare -a office=(Geany Gucharmap Evince \
 libreoffice-writer libreoffice-calc libreoffice-impress \
@@ -72,11 +63,11 @@ for i in ${settings[@]}; do
    bspc rule -a $i desktop='^6' state=floating follow=on focus=on; done
 
 # special rules
-bspc rule -a alacritty-float state=floating follow=on focus=on
+#bspc rule -a alacritty-float state=floating follow=on focus=on
 bspc rule -a Pcmanfm state=floating follow=on focus=on
 bspc rule -a Onboard state=floating follow=on focus=on
-bspc rule -a Audacious state=floating follow=on focus=on
-bspc rule -a Firefox:Places state=floating follow=on focus=on
+#bspc rule -a Audacious state=floating follow=on focus=on
+#bspc rule -a Firefox:Places state=floating follow=on focus=on
 bspc rule -a Viewnior state=floating follow=on focus=on
 bspc rule -a Nm-connection-editor state=floating follow=on focus=on
 bspc rule -a Conky state=floating manage=off
@@ -120,6 +111,8 @@ bash $HOME/.fehbg
 exec mpd &
 
 # Start bspwm scripts
+setxkbmap -option caps:escape
+wmname LG3D
 bspcolors
 bspcomp
 bspbar

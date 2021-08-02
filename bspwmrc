@@ -20,7 +20,7 @@ getcolors () {
 getcolors
 
 ## Configurations -------------------------------#
-bspc monitor -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII'
+bspc monitor eDP1 -d 'I' 'II' 'III'
 
 bspc config border_width 1
 bspc config window_gap 10
@@ -112,11 +112,16 @@ exec mpd &
 
 # Start bspwm scripts
 setxkbmap -option caps:escape
-wmname LG3D
+nitrogen --save --set-zoom-fill /usr/share/backgrounds/bg_0.png
 bspcolors
 bspcomp
 bspbar
 bspfloat &
+
+wmname LG3D
+# Dual Monitor
+if [[ $(xrandr -q | grep 'HDMI1 connected') ]];then
+    xrandr --output eDP1 --primary --mode 1366x768 --output HDMI1 --mode 1920x1080 --rotate normal --right-of eDP1
 
 ## Adjust backlight (AMD)
 #blight -d amdgpu_bl0 set 15%

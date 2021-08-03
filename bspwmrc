@@ -21,6 +21,7 @@ getcolors
 
 ## Configurations -------------------------------#
 bspc monitor eDP1 -d 'I' 'II' 'III'
+bspc monitor HDMI1 -d 'IV' 'V' 'VI'
 
 bspc config border_width 1
 bspc config window_gap 10
@@ -115,7 +116,8 @@ setxkbmap -option caps:escape
 nitrogen --save --set-zoom-fill /usr/share/backgrounds/bg_0.png
 bspcolors
 bspcomp
-bspbar
+bash "$HOME"/.config/polybar/launch.sh
+# bspbar
 bspfloat &
 
 wmname LG3D

@@ -10,14 +10,6 @@
 super + F6
     vlc --video-on-top
 
-#Virtualbox
-super + F1
-    virtualbox
-
-#Evolution
-#super + F9
-#    evolution
-
 ##Rofi Fullscreen
 #super + F11
 #    rofi -show drun -fullscreen
@@ -29,10 +21,6 @@ super + p
 #################################################################
 # SUPER + ... KEYS
 #################################################################
-
-#Atom
-#super + e
-#    atom
 
 #Note taking application (Notion)
 super + n
@@ -67,13 +55,10 @@ super + r
 super + v
     pavucontrol
 
-#Pragha
-#super + m
-#    pragha
-
 #terminal
 super + Return
-    xfce4-terminal
+    alacritty
+   # xfce4-terminal
 
 #Xkill
 super + Escape
@@ -97,7 +82,9 @@ super + shift + d
 #reload sxhkd:
 super + shift + s
 	pkill -USR1 -x sxhkd
-
+# toggle window visibility (hide/show)
+super + shift + o
+    bash $HOME/.config/bspwm/scripts/toggle_win_vis.sh
 
 #################################################################
 # CONTROL + ALT KEYS

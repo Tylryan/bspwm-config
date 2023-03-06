@@ -28,7 +28,7 @@ super + n
 
 #Browser
 super + shift + p
-   qutebrowser 
+   firefox 
 
 #Hide Conky
 super + c
@@ -45,7 +45,7 @@ super + t
 
 #arcolinux-logout
 super + x
-    arcolinux-logout
+    i3lock --color 000000 && systemctl suspend
 
 #Rofi theme selector
 super + r
@@ -57,7 +57,7 @@ super + v
 
 #terminal
 super + Return
-    alacritty
+    kitty
    # xfce4-terminal
 
 #Xkill
@@ -91,20 +91,20 @@ super + shift + o
 #################################################################
 
 #arcolinux-welcome-app
-ctrl + alt + w
-     arcolinux-welcome-app
+# ctrl + alt + w
+#      arcolinux-welcome-app
 
 #arcolinux-tweak-tool
-ctrl + alt + e
-    arcolinux-tweak-tool
+# ctrl + alt + e
+#     arcolinux-tweak-tool
 
 #conky-rotate
-ctrl + alt + Next
-     conky-rotate -n
+# ctrl + alt + Next
+#      conky-rotate -n
 
 #conky-rotate
-ctrl + alt + Prior
-    conky-rotate -p
+# ctrl + alt + Prior
+#     conky-rotate -p
 
 #Catfish
 #ctrl + alt + c
@@ -127,8 +127,8 @@ ctrl + alt + m
      xfce4-settings-manager
 
 #Pulse Audio Control
-super + a ; a
-     pavucontrol
+# super + a ; a
+#      pavucontrol
 
 ##Spotify
 #ctrl + alt + s
@@ -143,16 +143,16 @@ ctrl + alt + a
 #################################################################
 
 #Wallpaper trash
-alt + t
-    variety -t
+# alt + t
+#     variety -t
 
 #Wallpaper next
-alt + n
-    variety -n
+# alt + n
+#     variety -n
 
 #Wallpaper previous
-alt + p
-    variety -p
+# alt + p
+#     variety -p
 
 #Wallpaper favorite
 alt + f
@@ -167,12 +167,12 @@ alt + f
 #    variety -n
 
 #Wallpaper toggle-pause
-alt + Up
-    variety --toggle-pause
+# alt + Up
+#     variety --toggle-pause
 
 #Wallpaper resume
-alt + Down
-    variety --resume
+# alt + Down
+#     variety --resume
 
 #Xlunch app launcher
 #alt + F5
@@ -188,20 +188,20 @@ alt + Down
 #    variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper next
-alt + shift + n
-    variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + n
+#     variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper previous
-alt + shift + p
-    variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + p
+#     variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper favorite
-alt + shift + f
-    variety -f && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + f
+#     variety -f && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper update
-alt + shift + u
-    wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + u
+#     wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #################################################################
 # CONTROL + SHIFT KEYS
@@ -371,8 +371,8 @@ super + shift + r
 #	bspc node -c
 
 #Logout
-#super + shift + x
-#	bspc quit
+super + shift + q
+	bspc quit
 
 # Focus/swap windows by direction
 super + {_,shift + }{h,j,k,l}
@@ -398,8 +398,8 @@ super + o
 # super + ctrl + {Left,Down,Up,Right}
 # 	bspc node --{focus} {west,south,north,east}
 
-# Contract tiled space
-super + ctrl + {h,j,k,l}
+# Shrink tiled space
+super + ctrl + {l,k,j,h}
 	bspc node {@east -r -80,@north -r +80,@south -r -80,@west -r +80
 
 # # Focus parent/brother/first/second for preselection
@@ -433,8 +433,16 @@ alt + space
 #################################################################
 
 # Expand tiled space
-super + alt + {h,j,k,l}
-	bspc node {@west -r -80,@south -r +80,@north -r -80,@east -r +80}
+# super + alt + {h,j,k,l}
+# 	bspc node {@west -r -80,@south -r +80,@north -r -80,@east -r +80}
+super + alt + l
+    bash $HOME/.config/bspwm/scripts/shrinkx.sh
+super + alt + k
+    bash $HOME/.config/bspwm/scripts/shrinky.sh
+super + alt + h
+    bash $HOME/.config/bspwm/scripts/expandx.sh
+super + alt + j
+    bash $HOME/.config/bspwm/scripts/expandy.sh
 
 #################################################################
 # CTRL + ALT KEYS

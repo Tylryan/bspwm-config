@@ -28,7 +28,7 @@ super + n
 
 #Browser
 super + shift + p
-   firefox 
+   falkon 
 
 #Hide Conky
 super + c
@@ -36,7 +36,7 @@ super + c
 
 # Think or Swim
 super + t 
-    ~/Bin/tos.sh
+    /opt/thinkorswim/thinkorswim &
 
 # Only keeping this one because it shows you how to run an app from the terminal
 #Htop
@@ -58,7 +58,6 @@ super + v
 #terminal
 super + Return
     kitty
-   # xfce4-terminal
 
 #Xkill
 super + Escape
@@ -72,8 +71,8 @@ super + e
 #################################################################
 
 #File-Manager
-super + Return
-	thunar
+#super + Return
+#	thunar
 
 #dmenu
 super + shift + d

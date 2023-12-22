@@ -138,6 +138,13 @@ tray-background = ${colors.background}
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
+[bar/external]
+bottom = false
+monitor = HDMI-3
+modules-left = bspwm
+modules-center = root_usage memory-usage
+;modules-right = weather battery my-date 
+modules-right = battery my-date 
 
 ################################################################################
 ################################################################################
@@ -224,7 +231,7 @@ format-background = ${colors.background}
 ; My custom memory script
 [module/memory-usage]
 type = custom/script
-exec = ~/.local/bin/memory-polybar
+exec = ~/.config/polybar/scripts/memory.sh
 interval = 15
 format = Mem <label>
 format-prefix = "   "
@@ -235,7 +242,7 @@ format-background = ${colors.background}
 
 [module/battery-lite]
 type = custom/script
-exec = ~/Bin/c-code/bat/battery
+exec = ~/.local/bin/battery
 interval = 15
 format-underline = #a3c725
 format-foreground = ${colors.foreground}
@@ -302,7 +309,7 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ; Mines lighter lulz
-;exec = bash ~/Bin/weather
+;exec = bash ~/.local/bin/weather
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
 

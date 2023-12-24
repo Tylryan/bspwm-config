@@ -30,6 +30,8 @@ super + n
 super + shift + p
    falkon 
 
+super shift + f
+   firefox 
 #Hide Conky
 super + c
     conky-toggle
@@ -110,8 +112,8 @@ super + shift + o
 #     catfish
 
 #Nitrogen
-ctrl + alt + i
-     nitrogen
+#ctrl + alt + i
+     #nitrogen
 
 ##arcolinux-logout
 #ctrl + alt + l

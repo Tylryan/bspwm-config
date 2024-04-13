@@ -56,7 +56,7 @@ case $desktop in
 
     bspwm|/usr/share/xsessions/bspwm)
     if type "xrandr" > /dev/null; then
-        # Doing this means you have the same bar on two different monitors
+      # Doing this means you have the same bar on two different monitors
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-bspwm -c ~/.config/polybar/config &
       done

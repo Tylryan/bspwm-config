@@ -123,7 +123,7 @@ font-7 = "Font Awesome5 Brands Regular:size=10;0"
 modules-left = bspwm
 modules-center = root_usage memory-usage
 ;modules-right = weather battery my-date 
-modules-right = battery my-date 
+modules-right = bedtime battery my-date 
 
 
 tray-detached = false
@@ -168,12 +168,14 @@ pin-workspaces = true
 ;
 ;
 ws-icon-0 = 1;
-;ws-icon-1 = 2;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+;ws-icon-3 = 4;
+;ws-icon-4 = 5;
+;ws-icon-5 = 6;
 
 format = <label-state> <label-mode>
 
@@ -240,15 +242,26 @@ format-underline = #3384d0
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
+; I believe I wrote this for FreeBSD??
 [module/battery-lite]
 type = custom/script
-exec = ~/.local/bin/battery
+exec = ${HOME}/.config/polybar/scripts/battery/battery
 interval = 15
 format-underline = #a3c725
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ; click-left = notify-send $(~/Bin/battery)
+
+[module/bedtime]
+type = custom/script
+exec = ${HOME}/.config/polybar/scripts/my_scripts/bedtime.py
+interval = 60
+format-prefix = "   "
+format-prefix-foreground = #3384d0
+format-underline = #3384d0
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 
 [module/battery]
 ;https://github.com/jaagr/polybar/wiki/Module:-battery

@@ -343,6 +343,9 @@ super + space
 super + BackSpace
 		bspc monitor -f next
 
+#Move focused window to other monitor
+super + o
+	bspc node -m next --follow
 #################################################################
 # SUPER + ALT KEYS
 #################################################################
@@ -383,9 +386,6 @@ super + {_,shift + }{h,j,k,l}
 super + {_,shift + }a
 	bspc node @/ --flip {vertical,horizontal}
 
- Move focused window to other monitor
-super + o
-	bspc node -m next --follow
 
 # # Move focused window to other monitor
 # super + shift + Right

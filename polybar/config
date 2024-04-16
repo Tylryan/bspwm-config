@@ -116,9 +116,9 @@ font-1 = "Noto Sans:size=10;0"
 font-2 = "Noto Sans Mono:size=13;0"
 font-3 = "FontAwesome:size=13;0"
 font-4 = "Symbols Nerd Font:size=13;2"
-font-5 = "Font Awesome5 Free Solid:size=10;0"
-font-6 = "Font Awesome5 Free Regular:size=10;0"
-font-7 = "Font Awesome5 Brands Regular:size=10;0"
+font-5 = "Font Awesome6 Free Solid:size=10;0"
+font-6 = "Font Awesome6 Free Regular:size=10;0"
+font-7 = "Font Awesome6 Brands Regular:size=10;0"
 
 modules-left = bspwm
 modules-center = root_usage memory-usage

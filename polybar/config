@@ -303,7 +303,7 @@ animation-charging-framerate = 750
 [module/my-date]
 type = custom/script
 exec = date +%a", "%d"-"%m"-"%y" | "%R
-interval = 15
+interval = 60
 format-prefix = " "
 format-prefix-foreground = #c1941a
 format-underline = #c1941a
